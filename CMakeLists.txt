@@ -64,6 +64,8 @@ target_link_libraries(ads ${ads_LIBS})
 set(COMPILE_TESTS OFF CACHE BOOL "Enable unit tests")
 
 if (COMPILE_TESTS)
+  message("Compiling tests")  
+
   # Unit testing
   enable_testing()
 
