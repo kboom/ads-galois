@@ -1,0 +1,16 @@
+*.swp
+CMakeCache.txt
+CMakeFiles/
+Testing/
+Makefile
+bin/
+cmake_install.cmake
+CTestTestfile.cmake
+.cproject
+.project
+.settings
+*.vti
+*.data
+*.png
+*.gif
+build/
