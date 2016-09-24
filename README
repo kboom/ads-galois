@@ -27,7 +27,13 @@ To compile the code, create a directory for the build and execute following comm
 $ cmake <options> ${PROJECT_DIR}
 $ make
 
-where ${PROJECT_DIR} is the root directory of the project source. Options allow customizing which
+where ${PROJECT_DIR} is the root directory of the project source. 
+
+Use with compiler 5.4+ (tested on 6.2.0). If that version is not the default one use
+cmake -DCMAKE_C_COMPILER=/home/<user_home>/usr/local/bin/gcc -DCMAKE_CXX_COMPILER=/home/gurgula/usr/local/bin/g++ [...]
+inline options where /home/gurgula/usr/local is the path cpp compiler was installed to.
+
+Options allow customizing which
 parts of the project are compiled. By default parallelization using Galois is disabled, example
 applications are compiled and tests are skipped.
 
@@ -38,6 +44,11 @@ applications are compiled and tests are skipped.
 Options are specified as -Doption=value, e.g. 
 $ cmake -DUSE_GALOIS=ON ..
 
+Running
+-------
+
+In general shared libraries must be linked by 
+export LD_LIBRARY_PATH=/home/<user_home>/usr/local/lib64; ./heat_3d
 
 Contents
 --------
